@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html> 
+<html>
+<head>
+
+<title> MPG application </title>
+
+
+    
+    <style>
+    body {
+  font-family: sans-serif;
+  color: darkblue;
+  padding: 0 20%;
+}
+
+
+    
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+
+
+<body>
+  
+    <p>
+    <label for="start">Starting Stack: <br></label>
+        <input type="number"  div id="start" value="5555"/>
+        <p id="demo"></p>
+    <br>
+      <p>  
+    <label for="big">Big Blind: <br></label>
+        <input type="number" id="big" value="1" />
+    </p><br>
+    <p>
+         <label for="small">Small Blind: <br></label>
+        <input type="number" id="small" value="1" />
+    </p><br>
+    
+     <p>
+         <label for="ante">Ante: <br></label>
+        <input type="number" id="ante" value="1" />
+    </p><br>
+   
+    
+       <div id="myBtn">
+        
+           <button class="btn">Calculate Level 1</button>
+    
+</div>
+    <div id="mybtn2">
+    <button type="steve">Calculate Level 2</button>
+        </div>
+
+    
+    <p id="demo2"></p>
+
+    
+    <script>
+        
+        
+        
+        $("div#mybtn2").hide();
+        
+        
+        
+        $(document).ready(function(){
+    $(".btn").click(function(){
+        $("div#myBtn").remove();
+        $("div#mybtn2").show();
+            var start = parseInt(document.getElementById("start").value);
+            var big = parseInt(document.getElementById("big").value);
+            var small = parseInt(document.getElementById("small").value);
+            var ante = parseInt(document.getElementById("ante").value);
+            var butt = .75;
+            var ass = 7.5;
+            var sum1 = big * butt; 
+            var sum2 = small * butt;
+            var sum3 = ante * ass;
+            var total = sum1 + sum2 + sum3;
+            var result1 = start - total;
+            
+        alert(result1);
+    
+        
+        if (result1 > 0){
+            
+            var start = result1;
+            $(document).ready(function myFunction(){
+    $("div#mybtn2").click(function(){
+        
+            
+            var big = parseInt(document.getElementById("big").value);
+            var small = parseInt(document.getElementById("small").value);
+            var ante = parseInt(document.getElementById("ante").value);
+            var butt = .75;
+            var ass = 7.5;
+            var sum1 = big * butt; 
+            var sum2 = small * butt;
+            var sum3 = ante * ass;
+            var total = sum1 + sum2 + sum3;
+            var result1 = start - total;
+        
+        alert(result1);
+    })
+     
+  })
+    } else {
+        alert(poo);
+    }
+            
+    })}
+        );
+           
+         
+   
+        
+        
+// $(document).ready(function(){
+//    $(".steve").click(function(){
+//        
+//            var start = result1;
+//            var big = parseInt(document.getElementById("big").value);
+//            var small = parseInt(document.getElementById("small").value);
+//            var ante = parseInt(document.getElementById("ante").value);
+//            var butt = .75;
+//            var ass = 7.5;
+//            var sum1 = big * butt; 
+//            var sum2 = small * butt;
+//            var sum3 = ante * ass;
+//            var total = sum1 + sum2 + sum3;
+//            var result = start - total;
+//        
+//        alert(result);
+//    });
+//     
+//  });
+        
+        
+        
+//document.getElementById("myBtn").addEventListener("click", myFunction);
+//        
+//        
+//        function myFunction() {
+//    var start = parseInt(document.getElementById("start").value);
+//    var big = parseInt(document.getElementById("big").value);
+//    var small = parseInt(document.getElementById("small").value);
+//    var ante = parseInt(document.getElementById("ante").value);
+//    var butt = .75;
+//    var ass = 7.5;
+//    var sum1 = big * butt; 
+//    var sum2 = small * butt;
+//    var sum3 = ante * ass;
+//    var total = sum1 + sum2 + sum3;
+//    var result = start - total;
+//            $(".myBtn").remove();
+////            alert(result);
+//        }
+//        
+        
+        
+        
+        
+//        function myFunction(remainder){
+//        var start = parseInt(document.getElementById("start").value);
+//        var remainder = start - total;
+//            if (remainder = null){
+//        var start = parseInt(document.getElementById("start").value);
+//        var big = parseInt(document.getElementById("big").value);
+//        var small = parseInt(document.getElementById("small").value);
+//        var ante = parseInt(document.getElementById("ante").value);
+//        var butt = .75;
+//        var ass = 7.5;
+//        var sum1 = big * butt; 
+//        var sum2 = small * butt;
+//        var sum3 = ante * ass;
+//        var total = sum1 + sum2 + sum3;
+//        var remainder = start - total;
+//            } else (){
+//        var start = remainder;
+//        var big = parseInt(document.getElementById("big").value);
+//        var small = parseInt(document.getElementById("small").value);
+//        var ante = parseInt(document.getElementById("ante").value);
+//        var butt = .75;
+//        var ass = 7.5;
+//        var sum1 = big * butt; 
+//        var sum2 = small * butt;
+//        var sum3 = ante * ass;
+//        var total = sum1 + sum2 + sum3;
+//            }
+//        }
+        
+        
+        
+//        
+//function myFunction() {
+//    var start = parseInt(document.getElementById("start").value);
+//    var big = parseInt(document.getElementById("big").value);
+//    var small = parseInt(document.getElementById("small").value);
+//    var ante = parseInt(document.getElementById("ante").value);
+//    var butt = .75;
+//    var ass = 7.5;
+//    var sum1 = big * butt; 
+//    var sum2 = small * butt;
+//    var sum3 = ante * ass;
+//    var total = sum1 + sum2 + sum3;
+//    var result = start - total;
+//    
+//    
+//    if (result > 0) {
+//        
+////        var removeEl = document.getElementById("start");
+////        var containerEl = removeEl.parentNode;
+////        containerEl.removeChild(removeEl);
+////        document.getElementById("demo").innerHTML = result;
+////        function myFunction2(){
+////            var remaining = result;
+////            var big = parseInt(document.getElementById("big").value);
+////            var small = parseInt(document.getElementById("small").value);
+////            var ante = parseInt(document.getElementById("ante").value);
+////            var butt = .75;
+////            var ass = 7.5;
+////            var sum1 = big * butt; 
+////            var sum2 = small * butt;
+////            var sum3 = ante * ass;
+////            var total = sum1 + sum2 + sum3;
+////            var result = start - total;
+////            
+//        }
+//    }
+//    else {
+//        alert('bad');
+//    }
+//};
+//        
+        
+               
+
+</script>
+</body>
+
+
+</html>
+
